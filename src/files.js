@@ -13,27 +13,27 @@ const AppJs = `function Card(){
 export default Card;
 `
 
-const stylesCSS = `
-    .App {
-        display: block;
-        max-width: 720px;
-        margin-top: 150px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+const stylesCSS =
+`.App {
+    display: block;
+    max-width: 720px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .c-card {
-        display: flex;
-        justify-content: center;
-        width: 360px;
-        margin-left: auto;
-        margin-right: auto;
-        color: #fff;
-        background-color: #1A5F7A;
-        border-radius: 8px;
-        box-shadow: 5px 5px 20px #1a5f7a5d;
-        margin-bottom: 24px;
-    }
+.c-card {
+    display: flex;
+    justify-content: center;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    background-color: #1A5F7A;
+    border-radius: 8px;
+    box-shadow: 5px 5px 20px #1a5f7a5d;
+    margin-bottom: 24px;
+}
 `
 
 // Location of file as key (always starts with /)
@@ -42,7 +42,10 @@ const files = {
     code: AppJs
   },
   '/styles.css': {
-    code: stylesCSS
+    code: stylesCSS,
+    // active: true, // Default visible file on load? default `false`
+    // hidden: false // File visible in tab list? default `true`
+    hidden: true // File visible in tab list? default `true`
   },
 }
 export default files
